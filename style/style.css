@@ -156,7 +156,7 @@ main {
 .header-burger {
   display: none; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header-burger {
     display: block;
     position: relative;
@@ -179,11 +179,4 @@ main {
       height: 2px;
       top: 9px; }
     .header-burger:after {
-      bottom: 0; }
-  .header-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #18b5a4; } }
+      bottom: 0; } }
