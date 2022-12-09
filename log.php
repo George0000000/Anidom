@@ -1,38 +1,24 @@
+<?php
+include("path.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/reset.css">
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="assets/style/reset.css">
+  <link rel="stylesheet" href="assets/style/style.css">
   <title>Anidom</title>
 </head>
 <body>
 <div class="wrapper">
 
   <!--HEADER-->
-  <header class="header">
-    <div class="container header-container">
-      <div class="header-content">
-
-        <div class="header-burger">
-          <span></span>
-        </div>
-
-        <nav class="header-nav">
-          <a href="1index.html" class="header-item">Home</a>
-          <a href="#" class="header-item">Featured</a>
-          <a href="#" class="header-item">Gallery</a>
-        </nav>
-
-        <div class="header-func">
-          <a href="#" class="header-sign">Sign Up</a>
-          <input type="text" class="header-search" placeholder="Search Here..."></input>
-        </div>
-      </div>
-    </div>
-  </header>
+    <?php
+    include("app/include/header.php");
+    ?>
 
   <!--MAIN-->
 
@@ -60,7 +46,7 @@
 
           <div class="reg-buttons">
             <button class="reg-button">Log in</button>
-            <a href="reg.html" class="reg-registration">Registration</a>
+            <a href="reg.php" class="reg-registration">Registration</a>
           </div>
 
         </form>
@@ -71,16 +57,12 @@
 
   <!--FOOTER-->
 
-  <footer class="footer">
-    <div class="container header-container">
-      <div class="main-content">
-        footer
-      </div>
-    </div>
-  </footer>
+    <?php
+    include("app/include/footer.php");
+    ?>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="js/burger.js"></script>
+  <script src="assets/js/burger.js"></script>
 </div>
 </body>
 </html>
