@@ -1,22 +1,8 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.cdnfonts.com/css/post-no-bills-colombo");
 body {
-  background-image: url("../img/bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-  object-fit: cover;
-  background-size: cover;
-  font-family: Poppins;
-  font-weight: 500;
+  font-family: Post No Bills Colombo, sans-serif;
+  font-weight: 400;
   font-size: 14px; }
 
 .wrapper {
@@ -36,9 +22,10 @@ body {
   margin: 0 auto; }
 
 .header {
-  z-index: 50; }
+  z-index: 50;
+  background-color: black; }
   .header-content {
-    padding: 20px 0;
+    height: 65px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -50,82 +37,59 @@ body {
     justify-content: space-between;
     position: relative;
     z-index: 2; }
+  .header-effect:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 0;
+    height: 2px;
+    /* Высота линии */
+    background-color: white;
+    /* Цвет подчеркивания при исчезании линии*/
+    -webkit-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+    /* Время эффекта */ }
+  .header-effect:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 2px;
+    /* Высота линии */
+    background-color: #9424b3;
+    /* Цвет подчеркивания при появлении линии*/
+    -webkit-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+    /* Время эффекта */ }
+  .header-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .header-logo {
+    font-size: 35px;
+    margin-right: 40px;
+    color: #a5018c; }
   .header-item {
     color: white;
     font-size: 25px;
-    font-family: Amaranth;
-    font-weight: 700;
     position: relative;
     cursor: pointer; }
     .header-item:not(:last-child) {
       margin-right: 35px; }
-    .header-item:after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 0;
-      bottom: -3px;
-      width: 0;
-      height: 2px;
-      /* Высота линии */
-      background-color: white;
-      /* Цвет подчеркивания при исчезании линии*/
-      -webkit-transition: width 0.5s;
-      -o-transition: width 0.5s;
-      transition: width 0.5s;
-      /* Время эффекта */ }
-    .header-item:hover:after {
-      content: "";
-      width: 100%;
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      height: 2px;
-      /* Высота линии */
-      background-color: red;
-      /* Цвет подчеркивания при появлении линии*/
-      -webkit-transition: width 0.5s;
-      -o-transition: width 0.5s;
-      transition: width 0.5s;
-      /* Время эффекта */ }
   .header-sign {
     color: white;
     font-size: 25px;
-    font-family: Amaranth;
-    font-weight: 700;
     position: relative;
     cursor: pointer; }
-    .header-sign::after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 0;
-      bottom: -3px;
-      width: 0;
-      height: 2px;
-      /* Высота линии */
-      background-color: white;
-      /* Цвет подчеркивания при исчезании линии*/
-      -webkit-transition: width 0.5s;
-      -o-transition: width 0.5s;
-      transition: width 0.5s;
-      /* Время эффекта */ }
-    .header-sign:hover:after {
-      content: "";
-      width: 100%;
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      height: 2px;
-      /* Высота линии */
-      background-color: red;
-      /* Цвет подчеркивания при появлении линии*/
-      -webkit-transition: width 0.5s;
-      -o-transition: width 0.5s;
-      transition: width 0.5s;
-      /* Время эффекта */ }
   .header-search {
     color: white;
     margin-left: 15px;
@@ -148,10 +112,66 @@ body {
       color: #fff;
       opacity: 0.4; }
 
-main {
+.main {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto; }
+  .main-content {
+    padding-top: 150px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .main-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: bold;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse; }
+  .main-info {
+    max-width: 650px; }
+    .main-info__title {
+      vertical-align: top;
+      font-size: 60px;
+      background: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(#a5018c), to(#a5018c));
+      background: -webkit-linear-gradient(left, #000000, #a5018c, #a5018c);
+      background: -o-linear-gradient(left, #000000, #a5018c, #a5018c);
+      background: linear-gradient(90deg, #000000, #a5018c, #a5018c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #0B2349; }
+    .main-info__text {
+      font-size: 28px; }
+  .main-picture {
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 320px;
+    height: 320px;
+    border: 3px solid black;
+    font-size: 60px; }
+    .main-picture__title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 200px;
+      border-bottom: 3px solid black; }
 
 .header-burger {
   display: none; }
@@ -223,95 +243,116 @@ main {
     .header-nav.active {
       left: 0; }
   .header-item:not(:last-child) {
-    margin-bottom: 25px; } }
+    margin-bottom: 100px; } }
 
-.main {
-  font-family: Nunito;
-  font-weight: 900; }
-  .main-content {
-    padding-top: 200px; }
-  .main .reg {
-    width: 275px;
-    margin: 0 auto; }
-    .main .reg-name {
-      margin-bottom: 30px; }
-      .main .reg-name__label {
-        font-size: 17px;
-        padding-bottom: 10px; }
-      .main .reg-name__input {
-        color: black;
-        font-size: 17px;
-        background-color: white;
-        border: 2px solid black;
-        border-radius: 10px;
-        width: 275px;
-        height: 39px;
-        padding: 0.375rem 0.75rem; }
-    .main .reg-email {
-      margin-bottom: 30px; }
-      .main .reg-email__label {
-        font-size: 17px;
-        padding-bottom: 10px; }
-      .main .reg-email__input {
-        color: black;
-        font-size: 17px;
-        background-color: white;
-        border: 2px solid black;
-        border-radius: 10px;
-        width: 275px;
-        height: 39px;
-        padding: 0.375rem 0.75rem; }
-      .main .reg-email__help {
-        display: none; }
-    .main .reg-password {
-      margin-bottom: 50px; }
-      .main .reg-password__label {
-        font-size: 17px;
-        padding-bottom: 10px; }
-      .main .reg-password__input {
-        color: black;
-        font-size: 17px;
-        background-color: white;
-        border: 2px solid black;
-        border-radius: 10px;
-        width: 275px;
-        height: 39px;
-        padding: 0.375rem 0.75rem; }
-      .main .reg-password__help {
-        display: none; }
-    .main .reg .reg-button {
-      background-color: #fff;
-      padding: 0.375rem 0.75rem;
-      border-radius: 10px;
-      border: 2px solid black;
-      margin-right: 50px; }
-    .main .reg .reg-registration {
-      font-size: 20px;
-      border-bottom: 2px solid black;
+.main-reg__content {
+  padding-top: 200px; }
+
+.reg {
+  width: 275px;
+  margin: 0 auto; }
+  .reg-name {
+    margin-bottom: 30px; }
+    .reg-name__label {
+      font-size: 17px;
+      padding-bottom: 10px; }
+    .reg-name__input {
       color: black;
-      /* Цвет  текста */
-      font-size: 18px;
-      /* Размер  текста */
-      font-weight: bold;
-      text-transform: uppercase;
-      line-height: 1;
-      -webkit-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-      .main .reg .reg-registration:hover {
-        color: #ffa000;
-        /* Меняем цвет текста */
-        -webkit-text-shadow: 2px 2px 2px #000;
-        -moz-text-shadow: 2px 2px 2px #000;
-        text-shadow: 2px 2px 2px #000;
-        border-bottom: 2px solid #ffa000; }
+      font-size: 17px;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 10px;
+      width: 275px;
+      height: 39px;
+      padding: 0.375rem 0.75rem; }
+  .reg-email {
+    margin-bottom: 30px; }
+    .reg-email__label {
+      font-size: 17px;
+      padding-bottom: 10px; }
+    .reg-email__input {
+      color: black;
+      font-size: 17px;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 10px;
+      width: 275px;
+      height: 39px;
+      padding: 0.375rem 0.75rem; }
+    .reg-email__help {
+      display: none; }
+  .reg-password {
+    margin-bottom: 50px; }
+    .reg-password__label {
+      font-size: 17px;
+      padding-bottom: 10px; }
+    .reg-password__input {
+      color: black;
+      font-size: 17px;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 10px;
+      width: 275px;
+      height: 39px;
+      padding: 0.375rem 0.75rem; }
+    .reg-password__help {
+      display: none; }
+  .reg .reg-button {
+    background-color: #fff;
+    padding: 0.375rem 0.75rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-right: 50px; }
+  .reg .reg-registration {
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    color: black;
+    /* Цвет  текста */
+    font-size: 18px;
+    /* Размер  текста */
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .reg .reg-registration:hover {
+      color: #ffa000;
+      /* Меняем цвет текста */
+      -webkit-text-shadow: 2px 2px 2px #000;
+      -moz-text-shadow: 2px 2px 2px #000;
+      text-shadow: 2px 2px 2px #000;
+      border-bottom: 2px solid #ffa000; }
 
-.header-sign {
-  font-size: 19px; }
+@media (max-width: 768px) {
+  .header-burger {
+    margin-right: 20px; }
+  .header-item {
+    width: 100px;
+    font-size: 35px; }
+  .header-logo {
+    font-size: 30px; }
+  .header-sign {
+    font-size: 17px; }
+  .header-search {
+    font-size: 11px;
+    width: 100px;
+    margin-left: 10px; }
+  .main-reg__content {
+    padding-top: 100px; } }
 
-.header-search {
-  font-size: 11px;
-  width: 100px; }
-
-.main-content {
-  padding-top: 100px; }
+@media (max-width: 990px) {
+  .main-content {
+    padding-top: 70px; }
+  .main-about {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .main-info__title {
+    text-align: center;
+    font-size: 50px; }
+  .main-info__text {
+    text-align: center;
+    font-size: 22px; }
+  .main .main-picture {
+    margin-bottom: 80px; } }

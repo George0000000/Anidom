@@ -22,9 +22,9 @@ include("path.php");
 
   <!--MAIN-->
 
-  <main class="main">
+  <main class="main-reg">
     <div class="container main-container">
-      <div class="main-content">
+      <div class="main-reg__content">
 
         <form class="reg" action="">
 

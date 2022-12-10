@@ -1,3 +1,55 @@
-main {
+.main {
   flex: 1 1 auto;
+
+  &-content {
+    padding-top: 150px;
+    flex-wrap: wrap;
+  }
+
+  &-about {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+  }
+
+  &-info {
+    max-width: 650px;
+    &__title {
+      vertical-align: top;
+      font-size: 60px;
+
+      //color: -webkit-linear-gradient(90deg, #000000,#000000,#a5018c);
+      //color: linear-gradient(90deg, #000000,#000000,#a5018c);
+      background: linear-gradient(90deg, #000000, #a5018c, #a5018c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #0B2349
+    }
+    &__text {
+      font-size: 28px;
+    }
+  }
+
+  &-picture {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 320px;
+    height: 320px;
+    border: 3px solid black;
+    font-size: 60px;
+    &__title {
+      display: flex;
+      justify-content: center;
+      width: 200px;
+      border-bottom: 3px solid black;
+    }
+    &__text {
+
+    }
+  }
+
 }

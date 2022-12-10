@@ -1,15 +1,66 @@
 //header
-.header-sign {
-  font-size: 19px;
+@media (max-width: 768px) {
+  .header {
+
+    &-content {
+
+    }
+
+    &-burger {
+      margin-right: 20px;
+    }
+
+    &-left {
+    }
+    &-item {
+      width: 100px;
+      font-size: 35px;
+    }
+    &-logo {
+      font-size: 30px;
+    }
+
+    &-func {
+    }
+    &-sign {
+      font-size: 17px;
+    }
+    &-search {
+      font-size: 11px;
+      width: 100px;
+      margin-left: 10px;
+    }
+  }
+
+  //reg
+  .main-reg__content {
+    padding-top: 100px;
+  }
 }
 
-.header-search {
-  font-size: 11px;
-  width: 100px;
-}
+@media (max-width: 990px) {
+  //main-main
+  .main {
+    &-content {
+      padding-top: 70px;
+    }
+    &-about {
+      justify-content: center;
+    }
 
-//reg
+    &-info {
+      &__title {
+        text-align: center;
+        font-size: 50px;
+      }
+      &__text {
+        text-align: center;
+        font-size: 22px;
+      }
+    }
 
-.main-content {
-  padding-top: 100px;
+    .main-picture {
+      margin-bottom: 80px;
+    }
+  }
 }

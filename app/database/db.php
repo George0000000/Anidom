@@ -17,9 +17,29 @@ function dbCheckError($query) {
     return true;
 }
 
+// Запрос на получение данных с одной таблицы
 function selectAll($table, $param = []) {
     global $pdo;
-    $sql = "SELECT * FROM $table WHERE admin_user = 1";
+    $sql = "SELECT * FROM $table";
+
+    if (!empty($param)) {
+        $i = 0;
+        foreach ($param as $key => $value) {
+            if (!is_numeric($value)) {
+                $value = "'".$value."'";
+            }
+            if ($i === 0) {
+                $sql = $sql . " WHERE $key=$value";
+            } else {
+                $sql = $sql . " AND $key=$value";
+            }
+            $i++;
+        }
+    }
+
+//    tt($sql);
+//    exit();
+
     $query = $pdo->prepare($sql);
     $query->execute();
 
@@ -28,6 +48,43 @@ function selectAll($table, $param = []) {
     return $query->fetchAll();
 }
 
-tt(selectAll('users'));
+// Запрос на получение одной строки с таблицы
+function selectOne($table, $param = []) {
+    global $pdo;
+    $sql = "SELECT * FROM $table";
+
+    if (!empty($param)) {
+        $i = 0;
+        foreach ($param as $key => $value) {
+            if (!is_numeric($value)) {
+                $value = "'".$value."'";
+            }
+            if ($i === 0) {
+                $sql = $sql . " WHERE $key=$value";
+            } else {
+                $sql = $sql . " AND $key=$value";
+            }
+            $i++;
+        }
+    }
+
+    $sql = $sql . " LIMIT 1";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckError($query);
+
+    return $query->fetch();
+}
+
+$param = [
+    'admin_user' => 1,
+    'name_user' => 'George'
+];
+
+//tt(selectAll('users', $param));
+
+tt(selectOne('users'));
 
 
