@@ -2,13 +2,22 @@
 
 
   &__content {
-    padding-top: 200px;
+    padding-top: 150px;
   }
 }
 
 .reg {
   width: 275px;
   margin: 0 auto;
+  font-weight: 600;
+
+  &-err {
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #d03d3d;
+  }
 
   &-name {
     margin-bottom: 30px;
@@ -54,7 +63,7 @@
     }
   }
   &-password {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     &__label {
       font-size: 17px;
       padding-bottom: 10px;
@@ -83,8 +92,10 @@
     border-radius: 10px;
     border: 2px solid black;
     margin-right: 50px;
+    margin-top: 30px;
   }
   .reg-registration {
+    margin-top: 30px;
     font-size: 20px;
     border-bottom: 2px solid black;
 
@@ -97,11 +108,11 @@
     transition: all 0.5s ease;
 
     &:hover{
-      color: #ffa000; /* Меняем цвет текста */
-      -webkit-text-shadow: 2px 2px 2px #000;
-      -moz-text-shadow: 2px 2px 2px #000;
-      text-shadow: 2px 2px 2px #000;
-      border-bottom: 2px solid #ffa000;
+      color: rgb(148, 36, 179); /* Меняем цвет текста */
+      -webkit-text-shadow: 1px 1px 1px #000;
+      -moz-text-shadow: 1px 1px 1px #000;
+      text-shadow: 1px 1px 1px #000;
+      border-bottom: 2px solid rgb(148, 36, 179);
     }
   }
 }

@@ -46,7 +46,7 @@ include("path.php");
 
           <div class="reg-buttons">
             <button class="reg-button">Log in</button>
-            <a href="reg.php" class="reg-registration">Registration</a>
+            <a href="<?php echo REG_URL?>" class="reg-registration">Registration</a>
           </div>
 
         </form>

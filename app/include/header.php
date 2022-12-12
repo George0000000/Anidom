@@ -8,14 +8,14 @@
                 </div>
                 <a href="<?php echo BASE_URL?>" class="header-logo">AniDom</a>
                 <nav class="header-nav">
-                    <a href="" class="header-item header-effect">seasons</a>
+                    <a href="#" class="header-item header-effect">seasons</a>
                     <a href="#" class="header-item header-effect">characters</a>
                     <a href="#" class="header-item header-effect">community</a>
                 </nav>
             </div>
 
             <div class="header-func">
-                <a href="#" class="header-sign header-effect">Sign Up</a>
+                <a href="<?php echo LOG_URL?>" class="header-sign header-effect">Sign Up</a>
                 <input type="text" class="header-search" placeholder="Search Here..."></input>
             </div>
         </div>

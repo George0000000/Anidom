@@ -37,9 +37,6 @@ function selectAll($table, $param = []) {
         }
     }
 
-//    tt($sql);
-//    exit();
-
     $query = $pdo->prepare($sql);
     $query->execute();
 
@@ -78,13 +75,75 @@ function selectOne($table, $param = []) {
     return $query->fetch();
 }
 
-$param = [
-    'admin_user' => 1,
-    'name_user' => 'George'
-];
 
-//tt(selectAll('users', $param));
+//Запись данных в таблице
+function insert($table, $param) {
+    global $pdo;
+    $i = 0;
+    $col = '';
+    $mask = '';
+    foreach ($param as $key => $value) {
+        if ($i === 0) {
+            $col = $col . "$key";
+            $mask = $mask ."'" . "$value"."'";
+        } else {
+            $col = $col . ", $key";
+            $mask = $mask . ", '" . "$value"."'";
+        }
+        $i++;
+    }
 
-tt(selectOne('users'));
+    $sql = "INSERT INTO $table ($col) VALUES ($mask)";
+
+
+
+    $query = $pdo->prepare($sql);
+    $query->execute($param);
+    dbCheckError($query);
+
+    return $pdo->lastInsertId();
+}
+
+//ОБновление строки в таблице
+function update($table, $id, $param) {
+    global $pdo;
+    $i = 0;
+    $str = '';
+    foreach ($param as $key => $value) {
+        if ($i === 0) {
+            $str = $str . $key . "='" . "$value" . "'";
+        } else {
+            $str = $str . ", " . $key . "= '" . "$value"."'";
+        }
+        $i++;
+    }
+
+    $sql = "UPDATE $table SET $str WHERE id_user = $id";
+
+//    tt($sql);
+//    exit();
+
+    $query = $pdo->prepare($sql);
+    $query->execute($param);
+    dbCheckError($query);
+}
+
+//Удаления строки в таблице
+function delete($table, $id) {
+    global $pdo;
+
+    $sql = "DELETE FROM $table WHERE id_user = $id ";
+
+//    tt($sql);
+//    exit();
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    dbCheckError($query);
+}
+
+
+
+
 
 
