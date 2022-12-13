@@ -15,8 +15,14 @@
             </div>
 
             <div class="header-func">
-                <a href="<?php echo LOG_URL?>" class="header-sign header-effect">Sign Up</a>
-                <input type="text" class="header-search" placeholder="Search Here..."></input>
+                <?php if (isset($_SESSION['id_user'])): ?>
+                    <a href="<?php echo BASE_URL . 'page.php'?>" class="header-sign"><?php echo $_SESSION['name_user']?></a>
+                    <div class="header-logout">
+                        <a href="<?php echo BASE_URL . 'logout.php'?>">logout</a>
+                    </div>
+                <?php else:?>
+                    <a href="<?php echo BASE_URL . 'log.php'?>" class="header-sign header-effect">Sign Up</a>
+                <?php endif;?>
             </div>
         </div>
     </div>

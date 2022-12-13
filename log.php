@@ -1,5 +1,6 @@
 <?php
-include("path.php");
+    include "path.php";
+    include "app/controllers/users.php";
 ?>
 
 <!DOCTYPE html>
@@ -26,17 +27,19 @@ include("path.php");
     <div class="container main-container">
       <div class="main-reg__content">
 
-        <form class="reg" action="">
-
+        <form class="reg" method="post" action="log.php">
+            <div class="reg-err">
+                <p><?=$errMsg?></p>
+            </div>
           <div class="reg-email">
             <label class="reg-email__label" for="reg-email__input">Email address</label>
-            <input placeholder="Enter your email" type="email" class="reg-email__input" id="reg-email__input">
+            <input name="email" value="" placeholder="Enter your email" type="email" class="reg-email__input" id="reg-email__input">
             <div class="reg-email__help">We'll never share your email with anyone else</div>
           </div>
 
           <div class="reg-password">
             <label class="reg-password__label" for="reg-password__input">Password</label>
-            <input type="password" class="reg-password__input" id="reg-password__input">
+            <input name="password" value="" type="password" class="reg-password__input" id="reg-password__input">
           </div>
 
           <!--                    <div class="reg-check">-->
@@ -45,8 +48,8 @@ include("path.php");
           <!--                    </div>-->
 
           <div class="reg-buttons">
-            <button class="reg-button">Log in</button>
-            <a href="<?php echo REG_URL?>" class="reg-registration">Registration</a>
+              <button type="submit" class="reg-button" name="log-button">Log in</button>
+              <a href="<?php echo BASE_URL . 'reg.php'?>" class="reg-registration">Registration</a>
           </div>
 
         </form>

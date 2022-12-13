@@ -3,7 +3,10 @@ include "app/database/db.php";
 
 $errMsg = '';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reg-button'])) {
+
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
     $passwordFirst = trim($_POST['password-first']);
@@ -33,13 +36,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'password_user' => $password
             ];
             $id = insert('users', $post);
-            $errMsg = "<p style='color: green'>" . "User $name  successfully registered" . "</p>";
+            $user = selectOne('users', ['id_user' => $id]);
+
+            $_SESSION['id_user'] = $user['id_user'];
+            $_SESSION['name_user'] = $user['name_user'];
+            $_SESSION['admin_user'] = $user['admin_user'];
+
+            header('location: ' . BASE_URL);
         }
     }
     //    $last_row = selectOne('users', ['id_user' => $id]);
 
 } else {
-    echo  'GET';
     $name = '';
+    $email = '';
+}
+//
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['log-button'])) {
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
+
+    if ($email === '' || $password === '') {
+        $errMsg = "Not all fields are filled!";
+    } else {
+        $existence = selectOne('users', ['email_user' => $email]);
+        if ($existence && password_verify($password, $existence['password_user'])) {
+            $_SESSION['id_user'] = $existence['id_user'];
+            $_SESSION['name_user'] = $existence['name_user'];
+            $_SESSION['admin_user'] = $existence['admin_user'];
+
+            header('location: ' . BASE_URL);
+        } else {
+            $errMsg = "Данные введены неверно";
+        }
+    }
+} else {
     $email = '';
 }

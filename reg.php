@@ -58,8 +58,8 @@
 <!--                    </div>-->
 
                     <div class="reg-buttons">
-                        <button type="submit" class="reg-button">Registration</button>
-                        <a href="<?php echo LOG_URL?>" class="reg-registration">log in</a>
+                        <button type="submit" class="reg-button" name="reg-button">Registration</button>
+                        <a href="<?php echo BASE_URL . 'log.php'?>" class="reg-registration">log in</a>
                     </div>
 
                 </form>

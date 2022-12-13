@@ -78,30 +78,40 @@
   }
 
   &-func {
-
+    &:hover {
+      .header-logout {
+        display: block;
+      }
+    }
   }
 
   &-sign {
     color: white;
-    font-size: 25px;
-
+    font-size: 30px;
     position: relative;
     cursor: pointer;
   }
+  .header-logout {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #181818;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 
-  &-search {
-    color: white;
-    margin-left: 15px;
-    font-size: 17px;
-    background-color: rgba(28, 28, 28, 0);
-    border: 1px solid white;
-    border-radius: 50px;
-    width: 150px;
-    padding: 0.375rem 0.75rem;
+    a {
+      font-size: 21px;
+      font-weight: 600;
+      color: white;
+      padding: 0;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      padding: 10px 10px 10px 10px;
 
-    &::placeholder {
-      color: #fff;
-      opacity: 0.4;
+      &:hover {
+        color: #a5018c;
+      }
     }
   }
 }

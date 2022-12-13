@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 require('connect.php');
 
 function tt($value) {
@@ -6,6 +9,8 @@ function tt($value) {
     print_r($value);
     echo '</pre>';
 };
+
+$errMsg = '';
 
 //Проверка выполнения запроса БД
 function dbCheckError($query) {
@@ -119,9 +124,6 @@ function update($table, $id, $param) {
     }
 
     $sql = "UPDATE $table SET $str WHERE id_user = $id";
-
-//    tt($sql);
-//    exit();
 
     $query = $pdo->prepare($sql);
     $query->execute($param);
