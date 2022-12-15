@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reg-button'])) {
     $passwordFirst = trim($_POST['password-first']);
     $passwordSecond = trim($_POST['password-second']);
     $admin = 0;
+    $about = $_POST['about'];
 
 
 
@@ -21,6 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reg-button'])) {
         $errMsg = "Name must be at least 4 characters";
     } elseif (mb_strlen($passwordFirst, 'UTF8') < 6) {
         $errMsg = "Password must contain at least 6 characters";
+
+    } elseif (mb_strlen($about, 'UTF8') < 15) {
+        $errMsg = "The 'About Me' field must contain at least 15 characters";
     } elseif ($passwordFirst !== $passwordSecond) {
         $errMsg = "Passwords do not match";
     } else {
@@ -33,7 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reg-button'])) {
                 'admin_user' => $admin,
                 'name_user' => $name,
                 'email_user' => $email,
-                'password_user' => $password
+                'password_user' => $password,
+                'about_user' => $about
             ];
             $id = insert('users', $post);
             $user = selectOne('users', ['id_user' => $id]);
@@ -41,6 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reg-button'])) {
             $_SESSION['id_user'] = $user['id_user'];
             $_SESSION['name_user'] = $user['name_user'];
             $_SESSION['admin_user'] = $user['admin_user'];
+            $_SESSION['created'] = $user['created'];
+            $_SESSION['about_user'] = $user['about_user'];
 
             header('location: ' . BASE_URL);
         }
@@ -61,9 +68,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['log-button'])) {
     } else {
         $existence = selectOne('users', ['email_user' => $email]);
         if ($existence && password_verify($password, $existence['password_user'])) {
+            $_SESSION['about_user'] = $existence['about_user'];
             $_SESSION['id_user'] = $existence['id_user'];
             $_SESSION['name_user'] = $existence['name_user'];
             $_SESSION['admin_user'] = $existence['admin_user'];
+            $_SESSION['created'] = $existence['created'];
 
             header('location: ' . BASE_URL);
         } else {

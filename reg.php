@@ -41,6 +41,11 @@
                         <input value="<?=$email?>" name="email" placeholder="Enter your email" type="email" class="reg-email__input" id="reg-email__input">
                         <div class="reg-email__help">We'll never share your email with anyone else</div>
                     </div>
+                    
+                    <div class="reg-about">
+                        <label class="reg-about__label" for="reg-about__input">About myself</label>
+                        <textarea name="about" placeholder="Please tell anything about you"  class="reg-about__input" id="reg-about__input"></textarea>
+                    </div>
 
                     <div class="reg-password">
                         <label class="reg-password__label" for="reg-password__input">Password</label>

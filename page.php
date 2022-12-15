@@ -23,10 +23,10 @@ include 'app/controllers/users.php';
             <div class="container main-container">
                 <div class="user-content">
                     <div class="user-about">
-                        <img src="" alt="">
+                        <img class="user-photo" src="assets/img/ava.jpg" alt="">
                         <div class="user-name"><?php echo $_SESSION['name_user']?></div>
-                        <div class="user-about"></div>
-                        <div class="user-date"></div>
+                        <div class="user-text"><?php echo $_SESSION['about_user']?></div>
+                        <div class="user-date">Account created: <?php echo $_SESSION['created']?></div>
                     </div>
                 </div>
             </div>

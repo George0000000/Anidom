@@ -17,7 +17,7 @@ body {
   flex-direction: column; }
 
 .container {
-  max-width: 1180px;
+  max-width: 1100px;
   padding: 0 10px;
   margin: 0 auto; }
 
@@ -263,7 +263,7 @@ main {
     font-weight: 900;
     color: #d03d3d; }
   .reg-name {
-    margin-bottom: 30px; }
+    margin-bottom: 25px; }
     .reg-name__label {
       font-size: 17px;
       padding-bottom: 10px; }
@@ -277,7 +277,7 @@ main {
       height: 39px;
       padding: 0.375rem 0.75rem; }
   .reg-email {
-    margin-bottom: 30px; }
+    margin-bottom: 25px; }
     .reg-email__label {
       font-size: 17px;
       padding-bottom: 10px; }
@@ -292,6 +292,22 @@ main {
       padding: 0.375rem 0.75rem; }
     .reg-email__help {
       display: none; }
+  .reg-about {
+    margin-bottom: 40px; }
+    .reg-about__label {
+      font-size: 17px;
+      padding-bottom: 10px; }
+    .reg-about__input {
+      resize: vertical;
+      color: black;
+      font-size: 17px;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 10px;
+      width: 275px;
+      max-height: 400px;
+      min-height: 65px;
+      padding: 0.375rem 0.75rem; }
   .reg-password {
     margin-bottom: 15px; }
     .reg-password__label {
@@ -369,3 +385,29 @@ main {
     font-size: 22px; }
   .main .main-picture {
     margin-bottom: 80px; } }
+
+.user-content {
+  padding-top: 100px; }
+
+.user-about {
+  max-width: 225px;
+  text-align: center; }
+
+.user-photo {
+  max-width: 250px;
+  border-radius: 50%;
+  margin-bottom: 20px; }
+
+.user-name {
+  font-size: 40px;
+  font-weight: 600; }
+
+.user-text {
+  word-wrap: break-word;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid black; }
+
+.user-date {
+  font-size: 18px; }
