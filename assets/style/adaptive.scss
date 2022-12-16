@@ -64,3 +64,44 @@
     }
   }
 }
+
+//page
+@media (max-width: 768px) {
+  .user {
+
+    &-content {
+      padding-top: 70px;
+      display: flex;
+      justify-content: center;
+    }
+    &-about {
+      margin-bottom: 100px;
+    }
+  }
+
+  .post {
+    &-content {
+
+    }
+    &-label {
+
+    }
+    &-title {
+      font-size: 20px;
+    }
+    &-text {
+    }
+  }
+
+  .card {
+    &-content {
+      padding: 15px;
+    }
+    &-title {
+      font-size: 24px;
+    }
+    &-text {
+      font-size: 17px;
+    }
+  }
+}

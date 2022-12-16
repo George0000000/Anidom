@@ -23,8 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reg-button'])) {
     } elseif (mb_strlen($passwordFirst, 'UTF8') < 6) {
         $errMsg = "Password must contain at least 6 characters";
 
-    } elseif (mb_strlen($about, 'UTF8') < 15) {
-        $errMsg = "The 'About Me' field must contain at least 15 characters";
+    } elseif (mb_strlen($about, 'UTF8') < 15 || mb_strlen($about, 'UTF8') > 100) {
+        $errMsg = "The 'About me' field must contain at least 15 and no more than 100 characters.";
     } elseif ($passwordFirst !== $passwordSecond) {
         $errMsg = "Passwords do not match";
     } else {

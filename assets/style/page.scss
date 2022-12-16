@@ -1,7 +1,10 @@
 
 .user {
   &-content {
-    padding-top: 100px;
+    padding-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &-about {
@@ -13,19 +16,21 @@
     max-width: 250px;
     border-radius: 50%;
     margin-bottom: 20px;
+    border: 2px solid #a5018c;
   }
 
   &-name {
     font-size: 40px;
     font-weight: 600;
+    margin-bottom: 10px;
   }
 
   &-text {
     word-wrap: break-word;
     font-size: 20px;
     line-height: 26px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    border-bottom: 1.5px solid #a5018c;
   }
 
   &-date {
