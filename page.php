@@ -77,7 +77,7 @@ include 'app/controllers/post.php';
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="assets/js/burger.js"></script>
-        <script src="assets/js/user.js"></script>
+        <script src="assets/js/popup.js"></script>
     </div>
 </body>
 </html>

@@ -9,7 +9,7 @@
                 <a href="<?php echo BASE_URL?>" class="header-logo">AniDom</a>
                 <nav class="header-nav">
                     <a href="<?php echo BASE_URL . 'season.php'?>" class="header-item header-effect">seasons</a>
-                    <a href="#" class="header-item header-effect">characters</a>
+                    <a href="<?php echo BASE_URL . 'char.php'?>" class="header-item header-effect">characters</a>
                     <a href="<?php echo BASE_URL . 'com.php'?>" class="header-item header-effect">community</a>
                 </nav>
             </div>

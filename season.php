@@ -41,7 +41,7 @@ include "app/controllers/series.php";
     <?php
     include("app/include/footer.php");
     ?>
-    <script src="assets/js/user.js"></script>
+    <script src="assets/js/popup.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="assets/js/burger.js"></script>
 </div>

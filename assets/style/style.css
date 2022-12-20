@@ -259,6 +259,89 @@ main {
 .season-first {
   width: 200px; }
 
+.char-content {
+  padding-top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.b-container {
+  border-radius: 20px;
+  text-align: center;
+  width: 280px;
+  height: 230px;
+  background-color: #ccc;
+  padding: 10px;
+  font-size: 25px;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s; }
+  .b-container:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+
+.b-popup {
+  width: 800px;
+  min-height: 200px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 0 10px #a5018c;
+  box-shadow: 0 0 10px #a5018c;
+  overflow: hidden;
+  position: relative;
+  top: -200px;
+  margin: 0 auto; }
+
+.b-popup .b-popup-content {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 15px; }
+
+.chcard {
+  display: inline-block;
+  margin-right: 70px; }
+  .chcard-title {
+    font-size: 35px;
+    background-color: rgba(210, 2, 179, 0.9);
+    border-radius: 10px; }
+  .chcard-about {
+    max-width: 300px; }
+  .chcard-name {
+    font-size: 30px;
+    padding-bottom: 10px; }
+  .chcard-text {
+    max-width: 480px;
+    font-size: 18px; }
+  .chcard-img {
+    border-radius: 20px;
+    max-width: 200px; }
+  .chcard-close {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 18px;
+    color: #a5018c;
+    font-weight: 700; }
+
 .com-content {
   padding-top: 200px;
   display: -webkit-box;
