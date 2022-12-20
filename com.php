@@ -1,5 +1,6 @@
 <?php
 include 'path.php';
+include 'app/controllers/post.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,30 @@ include 'path.php';
 
     <main class="main">
         <div class="container main-container">
+            <div class="com-content">
+                <div class="com-s">
+                    <form class="com-seasons" method="post" action="com.php">
+                        <button class="com-season" type="submit" name="s1-button">#SEASON 1</button>
+                        <button class="com-season" type="submit" name="s2-button">#SEASON 2</button>
+                        <button class="com-season" type="submit" name="s3-button">#SEASON 3</button>
+                        <button class="com-season" type="submit" name="s4-button">#SEASON 4</button>
+                        <button class="com-season" type="submit" name="s5-button">#SEASON 5</button>
+                        <button class="com-season" type="submit" name="s6-button">#SEASON 6</button>
+                        <button class="com-season" type="submit" name="sa-button">#SELECT ALL</button>
+                    </form>
+                </div>
 
+                <div class="com-post">
+                    <div class="blog-title">Posts</div>
+                    <?php
+                    for ($i = count($posts) - 1; $i >= 0; $i--) {
+
+                        include("app/include/card.php");
+
+                    }
+                    ?>
+                </div>
+            </div>
         </div>
     </main>
 

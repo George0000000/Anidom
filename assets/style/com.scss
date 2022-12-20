@@ -1,0 +1,25 @@
+
+.com {
+
+  &-content {
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &-seasons {
+    display: flex;
+    flex-direction: column;
+  }
+  &-season {
+    font-size: 25px;
+    width: 250px;
+    height: 45px;
+
+    border-radius: 20px;
+    border: 2px solid #a5018c;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+}

@@ -259,6 +259,35 @@ main {
 .season-first {
   width: 200px; }
 
+.com-content {
+  padding-top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.com-seasons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.com-season {
+  font-size: 25px;
+  width: 250px;
+  height: 45px;
+  border-radius: 20px;
+  border: 2px solid #a5018c; }
+  .com-season:not(:last-child) {
+    margin-bottom: 50px; }
+
 .main-reg__content {
   padding-top: 150px; }
 
@@ -414,7 +443,7 @@ main {
   z-index: 101; }
 
 .post-publish {
-  max-height: 500px;
+  max-height: 850px;
   max-width: 450px;
   border: 2px solid #a5018c;
   border-radius: 20px;
@@ -460,12 +489,20 @@ main {
   padding: 0.375rem 0.75rem;
   margin-bottom: 30px; }
 
+.post-hs {
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 10px;
+  border: 2px solid #a5018c;
+  border-radius: 20px;
+  padding: 3px 25px; }
+
 .post-button {
   font-size: 20px;
   font-weight: 400;
   position: relative;
   float: right;
-  margin-bottom: 20px;
   border: 2px solid #a5018c;
   border-radius: 20px;
   padding: 3px 25px; }
@@ -484,8 +521,12 @@ main {
   .post-button:hover:before {
     width: 100%; }
 
+.post-none {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 25px; }
+
 .card {
-  height: 100%;
   max-width: 450px;
   border: 2px solid #a5018c;
   border-radius: 20px;
@@ -516,6 +557,8 @@ main {
     -ms-flex-align: center;
     align-items: center; }
   .card-date {
+    font-size: 17px; }
+  .card-season {
     font-size: 17px; }
   .card-author {
     font-size: 18px;
@@ -576,3 +619,20 @@ main {
     font-size: 24px; }
   .card-text {
     font-size: 17px; } }
+
+@media (max-width: 767px) {
+  .com-content {
+    padding-top: 140px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .com-seasons {
+    margin-bottom: 100px; }
+  .com-season {
+    font-size: 25px;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #a5018c; }
+    .com-season:not(:last-child) {
+      margin-bottom: 30px; } }

@@ -1,4 +1,5 @@
 <?php
+include 'path.php';
 include "app/controllers/series.php";
 ?>
 
@@ -25,7 +26,13 @@ include "app/controllers/series.php";
             <div class="season-content">
                 <div class="season-first">
                     <div class="season-title">1 season</div>
-
+                    <div id="cincopa_d934f7">...</div><script type="text/javascript">
+                        var cpo = []; cpo["_object"] ="cincopa_d934f7"; cpo["_fid"] = "A0DA-5eQ27CC";
+                        var _cpmp = _cpmp || []; _cpmp.push(cpo);
+                        (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+                            cp.async = true; cp.src = "https://rtcdn.cincopa.com/libasync.js";
+                            var c = document.getElementsByTagName("script")[0];
+                            c.parentNode.insertBefore(cp, c); })(); </script>
                 </div>
             </div>
         </div>

@@ -107,3 +107,29 @@
     }
   }
 }
+
+//COM
+@media (max-width: 767px) {
+  .com {
+
+    &-content {
+      padding-top: 140px;
+      justify-content: center;
+    }
+    &-seasons {
+
+      margin-bottom: 100px;
+    }
+    &-season {
+      font-size: 25px;
+      width: 300px;
+      height: 40px;
+
+      border-radius: 20px;
+      border: 2px solid #a5018c;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

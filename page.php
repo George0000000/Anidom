@@ -3,7 +3,7 @@ include 'path.php';
 include 'app/controllers/post.php';
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,17 +40,29 @@ include 'app/controllers/post.php';
                                 <textarea name="title" placeholder="Title" class="post-title"></textarea>
                                 <textarea name="text" placeholder="Text" class="post-text"></textarea>
                                 <button name="post-button" class="post-button" type="submit">Publish</button>
+                                <select name="post-hs" class="post-hs">
+                                    <option name="1" value="1">1 season</option>
+                                    <option name="2" value="2">2 season</option>
+                                    <option name="3" value="3">3 season</option>
+                                    <option name="4" value="4">4 season</option>
+                                    <option name="5" value="5">5 season</option>
+                                    <option name="6" value="6">6 season</option>
+                                </select>
                             </form>
                         </div>
                         <div class="blog">
                             <div class="blog-title">Posts</div>
-                            <?php
-                                for ($i = count($posts) - 1; $i >= 0; $i--) {
+                            <?php if (isset($posts[0]['id_post'])): ?>
+                                <?php
+                                    for ($i = count($posts) - 1; $i >= 0; $i--) {
 
-                                    include("app/include/card.php");
+                                        include("app/include/card.php");
 
-                                }
-                            ?>
+                                    }
+                                ?>
+                            <?php else:?>
+                                <h2 class="post-none">You don't have a post</h2>
+                            <?php endif;?>
                         </div>
                     </div>
 
