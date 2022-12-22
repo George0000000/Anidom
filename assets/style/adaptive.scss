@@ -42,7 +42,7 @@
   //main-main
   .main {
     &-content {
-      padding-top: 70px;
+      padding-top: 140px;
     }
     &-about {
       justify-content: center;
@@ -110,6 +110,10 @@
 
 //COM
 @media (max-width: 767px) {
+  .container {
+    padding: 0px 10px;
+  }
+
   .com {
 
     &-content {
@@ -130,6 +134,36 @@
       &:not(:last-child) {
         margin-bottom: 30px;
       }
+    }
+  }
+}
+
+
+@media screen and (max-width: 990px){
+  .char-content {
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  .season {
+    &-video {
+      width: 345px;
+      height: 280px;
+    }
+    &-content {
+      padding-top: 140px;
+    }
+    &-panel {
+      margin-top: 50px;
+    }
+    &-accord {
+      font-size: 24px;
     }
   }
 }

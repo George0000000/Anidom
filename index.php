@@ -28,13 +28,30 @@ include 'app/database/db.php';
                   <div class="main-info__title">Information</div>
                   <div class="main-info__text">Welcome to AnimeDom This is a free web Application about the properties and various characteristics of features from the world of JoJo Warning: Articles have spoilers! The information in the profiles, like the results of the battle, is subjective. Everything can be challenged by users if they present sufficient arguments.
                   </div>
+
               </div>
               <div class="main-picture">
                   <div class="main-picture__title">JoJo</div>
                   <div class="main-picture__text">AniDom</div>
               </div>
+
           </div>
         </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
       </div>
     </main>
 

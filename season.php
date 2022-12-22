@@ -24,15 +24,13 @@ include "app/controllers/series.php";
     <main class="main">
         <div class="container main-container">
             <div class="season-content">
-                <div class="season-first">
-                    <div class="season-title">1 season</div>
-                    <div id="cincopa_d934f7">...</div><script type="text/javascript">
-                        var cpo = []; cpo["_object"] ="cincopa_d934f7"; cpo["_fid"] = "A0DA-5eQ27CC";
-                        var _cpmp = _cpmp || []; _cpmp.push(cpo);
-                        (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-                            cp.async = true; cp.src = "https://rtcdn.cincopa.com/libasync.js";
-                            var c = document.getElementsByTagName("script")[0];
-                            c.parentNode.insertBefore(cp, c); })(); </script>
+                <h1 class="season-title">Openings</h1>
+                <div class="season-opp">
+                    <?php
+                    for ($i = 0; $i < count($opp); $i++) {
+                        include("app/include/ser.php");
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -41,8 +39,8 @@ include "app/controllers/series.php";
     <?php
     include("app/include/footer.php");
     ?>
-    <script src="assets/js/popup.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="assets/js/accord.js"></script>
     <script src="assets/js/burger.js"></script>
 </div>
 </body>

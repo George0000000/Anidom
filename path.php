@@ -1,4 +1,4 @@
 <?php
 
-define('BASE_URL', 'http://localhost/anidom/');
+define('BASE_URL', 'http://localhost/Anidom/');
 

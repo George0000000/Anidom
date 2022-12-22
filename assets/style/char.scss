@@ -1,82 +1,88 @@
+
 .char-content {
-  padding-top: 200px;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 200px;
 }
 
-.b-container{
+.popup-content {
+  width: 300px;
+  height: 250px;
+  margin-bottom: 50px;
+}
+.box {
+  width: 300px;
+  height: 250px;
+  border: 2px solid #a5018c;
   border-radius: 20px;
-  text-align: center;
-  width:280px;
-  height:230px;
-  background-color: #ccc;
-  padding:10px;
-  font-size:25px;
-  color: black;
+  background-clip: padding-box;
   display: flex;
+
   justify-content: center;
   align-items: center;
 
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
-
-  transition: 0.6s;
-
-  &:hover {
-    transform: scale(1.1); // масштабирование
-  }
 }
 
-.b-popup{
-  width: 800px;
-  min-height:200px;
-  background-color: #ffffff;
-  border-radius: 25px;
-  box-shadow: 0 0 10px rgba(165, 1, 140, 1);
-
-  overflow:hidden;
-  position:relative;
-  top: -200px;
-  margin: 0 auto;
-}
-.b-popup .b-popup-content{
-  padding:15px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
+.button {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 5px;
+  color: black;
+  border: 2px solid #a5018c;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  background: rgb(231, 219, 219);
 }
 
-.chcard {
-  display: inline-block;
-  margin-right: 70px;
-
-  &-title {
-    font-size: 35px;
-    background-color: rgba(210, 2, 179, 0.9);
-    border-radius: 10px;
-  }
-  &-about {
-    max-width: 300px;
-
-  }
-  &-name {
-    font-size: 30px;
-    padding-bottom: 10px;
-  }
-  &-text{
-    max-width: 480px;
-    font-size: 18px;
-  }
-  &-img {
-    border-radius: 20px;
-    max-width: 200px;
-  }
-  &-close {
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    font-size: 18px;
-    color: #a5018c;
-    font-weight: 700;
-  }
+.overlay {
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
 }
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 3s ease-in-out;
+}
+
+.popup-name {
+  font-size: 30px;
+}
+.popup .close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #a5018c;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+

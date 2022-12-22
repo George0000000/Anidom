@@ -1,0 +1,28 @@
+.footer {
+  background-color: black;
+  &-container {
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  &-content {
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  &-text {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  &-title {
+    font-size: 22px;
+    padding: 3px;
+    border: 1px solid white;
+    border-radius:10px;
+    &__pink {
+      color: #a5018c;
+    }
+  }
+}
